@@ -14,9 +14,6 @@ let LCLCurrentLanguageKey = "LCLCurrentLanguageKey"
 /// Default language. English. If English is unavailable defaults to base localization.
 let LCLDefaultLanguage = "en"
 
-/// Base bundle as fallback.
-let LCLBaseBundle = "Base"
-
 /// Name for language change notification
 public let LCLLanguageChangeNotification = "LCLLanguageChangeNotification"
 

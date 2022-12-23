@@ -27,14 +27,14 @@ public extension String {
            let currentLanguageBundle = Bundle(path: path) {
            let localizedString = currentLanguageBundle.localizedString(forKey: self, value: nil, table: tableName)
            if localizedString == self,
-               let basePath = bundle.path(forResource: LCLBaseBundle, ofType: "lproj"),
+               let basePath = bundle.path(forResource: LCLDefaultLanguage, ofType: "lproj"),
                let bundle = Bundle(path: basePath) {
                return bundle.localizedString(forKey: self, value: nil, table: tableName)
            } else {
                return localizedString
            }
         }
-        else if let path = bundle.path(forResource: LCLBaseBundle, ofType: "lproj"),
+        else if let path = bundle.path(forResource: LCLDefaultLanguage, ofType: "lproj"),
             let bundle = Bundle(path: path) {
             return bundle.localizedString(forKey: self, value: nil, table: tableName)
         }
